@@ -1,2 +1,4 @@
-vim.keymap.set({'i', 'v'}, 'jk', "<Esc>", { noremap = true, silent = true })
+local Map = require('utils.keymap').Map
+
+Map({'i', 'v'}, 'jk', '<Esc>')
 
