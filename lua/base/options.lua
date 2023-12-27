@@ -9,3 +9,4 @@ o.softtabstop = 2
 o.shiftwidth = 2
 o.shiftround = true
 
+o.timeoutlen = 300

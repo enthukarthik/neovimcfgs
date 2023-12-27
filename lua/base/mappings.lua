@@ -1,4 +1,4 @@
-local Map = require('utils.keymap').Map
+local ivnoremap = require('utils.keymap').Ivnoremap
 
-Map({'i', 'v'}, 'jk', '<Esc>')
+ivnoremap('jk', '<Esc>')
 
