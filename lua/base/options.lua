@@ -1,42 +1,56 @@
-local o = vim.opt
+local options = {
+  number = true,
+  relativenumber = true,
+  numberwidth = 2,
+  list = true,
+  listchars = { tab = "→ ", trail = "·", extends = "»", precedes = "«", eol = "¬" },
+  showmode = false,
 
-o.number = true
-o.relativenumber = true
-o.list = true
-o.listchars = { tab = "→ ", trail = "·", extends = "»", precedes = "«", eol = "¬" }
+  background = "dark",
+  termguicolors = true,
+  cursorline = true,
 
-o.background = "dark"
-o.termguicolors = true
-o.cursorline = true
+  signcolumn = "yes",
 
-o.signcolumn = "yes"
+  expandtab = true,
+  tabstop = 2,
+  softtabstop = 2,
+  shiftwidth = 2,
+  shiftround = true,
 
-o.expandtab = true
-o.tabstop = 2
-o.softtabstop = 2
-o.shiftwidth = 2
-o.shiftround = true
+  ignorecase = true,
+  hlsearch = true,
+  smartcase = true,
+  grepprg = "rg --vimgrep",
+  grepformat = "%f:%l:%c:%m",                -- :h errorformat
 
-o.ignorecase = true
-o.hlsearch = false
-o.smartcase = true
+  smartindent = true,
 
-o.smartindent = true
+  scrolloff = 15,
+  sidescrolloff = 5,
 
-o.scrolloff = 15
-o.sidescrolloff = 5
+  clipboard = { "unnamed", "unnamedplus" },
+  splitright = true,
+  splitbelow = true,
+  showtabline = 2,
+  swapfile = false,
+  undofile = true,
+  virtualedit = "block",
+  mouse = "a",
+  mousemoveevent = true,
+  autowrite = true,
+  formatoptions = "tqnlj",                       -- :h fo-table
+  fileencoding = "utf-8",
 
-o.splitright = true
-o.splitbelow = true
-o.swapfile = false
-o.undofile = true
-o.virtualedit = "block"
-o.mouse = "a"
-o.mousemoveevent = true
+  updatetime = 250,
+  timeoutlen = 300,
+}
 
-o.updatetime = 250
-o.timeoutlen = 300
+vim.opt.shortmess:append("IsF")                     -- :h shortmvim.opt
+vim.opt.whichwrap:append("<>[]hl")                  -- :h whichwrap
+vim.opt.iskeyword:append("-")
 
-o.clipboard:append("unnamedplus")
-o.shortmess:append("IsF")
+for key,value in pairs(options) do
+  vim.opt[key] = value
+end
 

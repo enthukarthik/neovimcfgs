@@ -1,0 +1,14 @@
+{
+  "catppuccin": { "branch": "main", "commit": "18267654c665310c665d3b7c6bc43d5f5ea5e410" },
+  "decay": { "branch": "main", "commit": "e1cb1a8a80b2ac86f3a153884a90ba963ecb1f51" },
+  "everblush": { "branch": "main", "commit": "9a0e695fdd57b340d3ba2b72406e3ca519029f25" },
+  "gruvbox": { "branch": "main", "commit": "61b0b3be2f0cfd521667403a0367298144d6c165" },
+  "kanagawa": { "branch": "master", "commit": "c19b9023842697ec92caf72cd3599f7dd7be4456" },
+  "lazy.nvim": { "branch": "main", "commit": "96584866b9c5e998cbae300594d0ccfd0c464627" },
+  "lush.nvim": { "branch": "main", "commit": "6923ccef17c5276bc5d3cca907082e19ee165d55" },
+  "monokai.nvim": { "branch": "master", "commit": "b8bd44d5796503173627d7a1fc51f77ec3a08a63" },
+  "neovim-ayu": { "branch": "master", "commit": "76dbf939b38e03ac5f9bd711ab3e434999f715c8" },
+  "onedark": { "branch": "master", "commit": "c5476a091b0f1b4e853db91c91ff941f848a1cdd" },
+  "tokyodark.nvim": { "branch": "master", "commit": "4bfb42924274abc5de9f5f4779075b77c6112c85" },
+  "wombat.nvim": { "branch": "main", "commit": "96989b1198baad625725ac8166d048726b32d95f" }
+}

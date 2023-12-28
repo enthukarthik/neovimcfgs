@@ -12,11 +12,21 @@ local function bind(mode, util_options)
   end
 end
 
+-- Modes
+--   normal_mode       = "n",
+--   insert_mode       = "i",
+--   visual_mode       = "v",
+--   visual_block_mode = "x",
+--   terminal_mode     = "t",
+--   command_mode      = "c",
+
 M.Map = bind('n', { noremap = false })
+M.AllMap = bind('')
 M.Nnoremap = bind('n')
 M.Inoremap = bind('i')
 M.Vnoremap = bind('v')
 M.Tnoremap = bind('t')
+M.Xnoremap = bind('x')
 M.Ivnoremap = bind({'i', 'v'})
 
 return M
