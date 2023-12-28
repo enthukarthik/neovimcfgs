@@ -30,9 +30,9 @@ local options = {
   sidescrolloff = 5,
 
   clipboard = { "unnamed", "unnamedplus" },
+  completeopt = "menu,menuone,noselect",
   splitright = true,
   splitbelow = true,
-  showtabline = 2,
   swapfile = false,
   undofile = true,
   virtualedit = "block",

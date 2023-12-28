@@ -13,68 +13,7 @@ end
 
 vim.opt.rtp:prepend(lazypath)
 
-local plugins_directory = {
-  { import = "plugins" }
-}
+local plugins_directories = require("plugins.overrides.lazy").plugins_directories
+local lazy_opts = require("plugins.overrides.lazy").lazy_opts
 
-local lazy_opts = {
-  defaults = {
-    lazy = true, -- let all the plugins be lazy loaded by default
-    version = "*", -- install the latest stable version of all the plugins
-  },
-  install = {
-    colorscheme = { "monokai_pro" },
-  },
-  ui = {
-    icons = {
-      ft = " ",
-      lazy = "󰂠 ",
-      loaded = " ",
-      not_loaded = " ",
-    },
-  },
-  performance = {
-    rtp = {
-      disabled_plugins = {
-        "2html_plugin",
-        "tohtml",
-        "getscript",
-        "getscriptPlugin",
-        "gzip",
-        "logipat",
-        "netrw",
-        "netrwPlugin",
-        "netrwSettings",
-        "netrwFileHandlers",
-        "matchit",
-        "matchparen",
-        "tar",
-        "tarPlugin",
-        "rrhelper",
-        "spellfile_plugin",
-        "vimball",
-        "vimballPlugin",
-        "zip",
-        "zipPlugin",
-        "tutor",
-        "rplugin",
-        "syntax",
-        "synmenu",
-        "optwin",
-        "compiler",
-        "bugreport",
-        "ftplugin",
-      },
-    }
-  },
-  checker = {
-    enabled = true,
-    notify = false,
-  },
-  change_detection = {
-    enabled = true,
-    notify = false,
-  },
-}
-
-require("lazy").setup(plugins_directory, lazy_opts)
+require("lazy").setup(plugins_directories, lazy_opts)

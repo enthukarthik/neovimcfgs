@@ -5,6 +5,7 @@ local tnoremap = require('utils.keymap').Tnoremap
 local xnoremap = require('utils.keymap').Xnoremap
 
 ivnoremap('jk', '<Esc>')
+ivnoremap('kj', '<Esc>')
 
 -- Window pane navigation
 nnoremap('<C-h>','<C-w>h')
@@ -12,28 +13,29 @@ nnoremap('<C-j>','<C-w>j')
 nnoremap('<C-k>','<C-w>k')
 nnoremap('<C-l>','<C-w>l')
 
-nnoremap('<leader>sv', '<C-w>v')
-nnoremap('<leader>sh', '<C-w>s')
-nnoremap('<leader>sx', ':close<CR>')
-nnoremap('<leader>se', '<C-w>=')
+nnoremap('<leader>sv', '<C-w>v') -- split vertically
+nnoremap('<leader>sh', '<C-w>s') -- split horizontally
+nnoremap('<leader>sx', ':close<CR>') -- close pane
+nnoremap('<leader>se', '<C-w>=') -- make all panes of same sizes
 
 -- Resize pane windows with arrow keys
-nnoremap('<C-Up>', ':resize -2<CR>')
-nnoremap('<C-Down>', ':resize +2<CR>')
-nnoremap('<C-Right>', ':vertical resize -2<CR>')
-nnoremap('<C-Left>', ':vertical resize +2<CR>')
+nnoremap('<C-Up>', ':resize +2<CR>')
+nnoremap('<C-Down>', ':resize -2<CR>')
+nnoremap('<C-Right>', ':vertical resize +2<CR>')
+nnoremap('<C-Left>', ':vertical resize -2<CR>')
 
 -- Buffer navigation
-nnoremap('<tab>', ':bnext<CR>')
-nnoremap('<S-tab>', ':bprevious<CR>')
+nnoremap('<S-l>', ':bnext<CR>')
+nnoremap('<S-h>', ':bprevious<CR>')
+nnoremap('<S-d>', ':bdelete<CR>')
 
 nnoremap('<leader>h', ':nohlsearch<CR>')
 
 nnoremap('<leader>a', 'ggVG') -- Select all
 
 -- Move text up or down
-nnoremap('<A-j>', '<Esc>:m .+1<CR>==gi')
-nnoremap('<A-k>', '<Esc>:m .-2<CR>==gi')
+-- nnoremap('<A-j>', '<Esc>:m .+1<CR>==gi')
+-- nnoremap('<A-k>', '<Esc>:m .-2<CR>==gi')
 
 -- stay in indent mode
 vnoremap('<', '<gv')
