@@ -13,7 +13,7 @@ end
 
 vim.opt.rtp:prepend(lazypath)
 
-local plugins_directories = require("plugins.overrides.lazy").plugins_directories
+local specs = require("plugins.overrides.lazy").specs
 local lazy_opts = require("plugins.overrides.lazy").lazy_opts
 
-require("lazy").setup(plugins_directories, lazy_opts)
+require("lazy").setup(specs, lazy_opts)

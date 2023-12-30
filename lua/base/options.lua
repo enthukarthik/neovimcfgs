@@ -6,8 +6,6 @@ local options = {
   listchars = { tab = "→ ", trail = "·", extends = "»", precedes = "«", eol = "¬" },
   showmode = false,
 
-  background = "dark",
-  termguicolors = true,
   cursorline = true,
 
   signcolumn = "yes",
@@ -29,7 +27,7 @@ local options = {
   scrolloff = 15,
   sidescrolloff = 5,
 
-  clipboard = { "unnamed", "unnamedplus" },
+  clipboard = "unnamed,unnamedplus",
   completeopt = "menu,menuone,noselect",
   splitright = true,
   splitbelow = true,
@@ -41,9 +39,6 @@ local options = {
   autowrite = true,
   formatoptions = "tqnlj",                       -- :h fo-table
   fileencoding = "utf-8",
-
-  updatetime = 250,
-  timeoutlen = 300,
 }
 
 vim.opt.shortmess:append("IsF")                     -- :h shortmvim.opt

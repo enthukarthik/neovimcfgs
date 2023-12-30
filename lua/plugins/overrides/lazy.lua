@@ -1,6 +1,6 @@
 local M = {}
 
-M.plugins_directories = {
+M.specs = {
   { import = "plugins" }
 }
 

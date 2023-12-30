@@ -1,3 +1,5 @@
+vim.opt.timeoutlen = 300
+
 local ivnoremap = require('utils.keymap').Ivnoremap
 local vnoremap = require('utils.keymap').Vnoremap
 local nnoremap = require('utils.keymap').Nnoremap
@@ -33,6 +35,8 @@ nnoremap('<leader>h', ':nohlsearch<CR>')
 
 nnoremap('<leader>a', 'ggVG') -- Select all
 
+nnoremap('<leader>p', '"*p')
+
 -- Move text up or down
 -- nnoremap('<A-j>', '<Esc>:m .+1<CR>==gi')
 -- nnoremap('<A-k>', '<Esc>:m .-2<CR>==gi')
@@ -56,3 +60,4 @@ xnoremap('J', ":move '>+1<CR>gv-gv")
 xnoremap('<A-j>', ":move '>+1<CR>gv-gv")
 xnoremap('K', ":move '<-2<CR>gv-gv")
 xnoremap('<A-k>', ":move '<-2<CR>gv-gv")
+
