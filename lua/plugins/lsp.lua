@@ -66,10 +66,10 @@ return {
         },
       })
 
-      nnoremap("<Space>e", vim.diagnostic.open_float);
+      nnoremap("<leader>e", vim.diagnostic.open_float);
       nnoremap("[d", vim.diagnostic.goto_prev);
       nnoremap("]d", vim.diagnostic.goto_next);
-      nnoremap("<Space>q", vim.diagnostic.setloclist);
+      nnoremap("<leader>q", vim.diagnostic.setloclist);
 
       vim.api.nvim_create_autocmd('LspAttach', {
         group = vim.api.nvim_create_augroup('UserLspConfig', {}),
@@ -86,15 +86,15 @@ return {
           nnoremap('gi', vim.lsp.buf.implementation, opts)
           nnoremap('gr', vim.lsp.buf.references, opts)
           nnoremap('<C-k>', vim.lsp.buf.signature_help, opts)
-          nnoremap('<space>wa', vim.lsp.buf.add_workspace_folder, opts)
-          nnoremap('<space>wr', vim.lsp.buf.remove_workspace_folder, opts)
-          nnoremap('<space>wl', function()
+          nnoremap('<leader>wa', vim.lsp.buf.add_workspace_folder, opts)
+          nnoremap('<leader>wr', vim.lsp.buf.remove_workspace_folder, opts)
+          nnoremap('<leader>wl', function()
             print(vim.inspect(vim.lsp.buf.list_workspace_folders()))
           end, opts)
-          nnoremap('<space>D', vim.lsp.buf.type_definition, opts)
-          nnoremap('<space>rn', vim.lsp.buf.rename, opts)
-          nnoremap('<space>ca', vim.lsp.buf.code_action, opts)
-          nnoremap('<space>f', function()
+          nnoremap('<leader>D', vim.lsp.buf.type_definition, opts)
+          nnoremap('<leader>rn', vim.lsp.buf.rename, opts)
+          nnoremap('<leader>ca', vim.lsp.buf.code_action, opts)
+          nnoremap('<leader>f', function()
             vim.lsp.buf.format { async = true }
           end, opts)
         end,
