@@ -21,8 +21,15 @@ return {
   },
   {
     "akinsho/toggleterm.nvim", 
+    keys = require("plugins.overrides.toggleterm").toggletermkeymap,
     version = "*", 
     config = require("plugins.overrides.toggleterm").toggletermsetup,
+  },
+  {
+    "nvim-lualine/lualine.nvim",
+    event = "VeryLazy",
+    dependencies = { 'nvim-tree/nvim-web-devicons' },
+    config = require("plugins.overrides.lualine").lualinesetup,
   },
   {
     -- gcc - to add a linewise comment

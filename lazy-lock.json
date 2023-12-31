@@ -8,6 +8,7 @@
   "kanagawa": { "branch": "master", "commit": "c19b9023842697ec92caf72cd3599f7dd7be4456" },
   "lazy.nvim": { "branch": "main", "commit": "96584866b9c5e998cbae300594d0ccfd0c464627" },
   "lazygit.nvim": { "branch": "main", "commit": "1e08e3f5ac1152339690140e61a4a32b3bdc7de5" },
+  "lualine.nvim": { "branch": "master", "commit": "566b7036f717f3d676362742630518a47f132fff" },
   "monokai.nvim": { "branch": "master", "commit": "b8bd44d5796503173627d7a1fc51f77ec3a08a63" },
   "neo-tree.nvim": { "branch": "v3.x", "commit": "77d9f484b88fd380386b46ed9206e5374d69d9d8" },
   "neovim-ayu": { "branch": "master", "commit": "76dbf939b38e03ac5f9bd711ab3e434999f715c8" },

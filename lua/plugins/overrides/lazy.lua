@@ -10,7 +10,7 @@ M.lazy_opts = {
     version = "*", -- install the latest stable version of all the plugins
   },
   install = {
-    colorscheme = { "decay" },
+    colorscheme = { "gruvbox" },
   },
   ui = {
     icons = {

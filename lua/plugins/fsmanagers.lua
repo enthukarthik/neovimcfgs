@@ -11,6 +11,10 @@ return {
     config = require("plugins.overrides.neotree").neotreesetup,
   },
   {
+    "nvim-telescope/telescope-file-browser.nvim",
+    dependencies = { "nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim", "nvim-tree/nvim-web-devicons" }
+  },
+  {
     'stevearc/oil.nvim',
     keys = require("plugins.overrides.oil").oilkeymap,
     opts = {},
