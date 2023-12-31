@@ -3,7 +3,7 @@ return {
     "williamboman/mason.nvim",
     cmd = { "Mason", "MasonInstall", "MasonInstallAll", "MasonUpdate" },
     config = function()
-      local mason_options = {
+      local srv_options = {
         ensure_installed = {
           "lua-language-server",
           --"stylua",
@@ -23,12 +23,12 @@ return {
       })
 
       vim.api.nvim_create_user_command("MasonInstallAll", function()
-        if mason_options.ensure_installed and #mason_options.ensure_installed > 0 then
-          vim.cmd("MasonInstall " .. table.concat(mason_options.ensure_installed, " "))
+        if srv_options.ensure_installed and #srv_options.ensure_installed > 0 then
+          vim.cmd("MasonInstall " .. table.concat(srv_options.ensure_installed, " "))
         end
       end, {})
 
-      vim.g.mason_binaries_list = mason_options.ensure_installed
+      vim.g.mason_binaries_list = srv_options.ensure_installed
     end,
   },
   {
@@ -57,13 +57,13 @@ return {
 
       vim.api.nvim_create_autocmd('LspAttach', {
         group = vim.api.nvim_create_augroup('UserLspConfig', {}),
-        callback = function(ev)
+        callback = function(args)
           -- Enable completion triggered by <c-x><c-o>
-          vim.bo[ev.buf].omnifunc = 'v:lua.vim.lsp.omnifunc'
+          vim.bo[args.buf].omnifunc = 'v:lua.vim.lsp.omnifunc'
 
           -- Buffer local mappings.
           -- See `:help vim.lsp.*` for documentation on any of the below functions
-          local opts = { buffer = ev.buf }
+          local opts = { buffer = args.buf }
           nnoremap('gD', vim.lsp.buf.declaration, opts)
           nnoremap('gd', vim.lsp.buf.definition, opts)
           nnoremap('K', vim.lsp.buf.hover, opts)
