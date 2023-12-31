@@ -3,13 +3,6 @@ return {
     "williamboman/mason.nvim",
     cmd = { "Mason", "MasonInstall", "MasonInstallAll", "MasonUpdate" },
     config = function()
-      local srv_options = {
-        ensure_installed = {
-          "lua-language-server",
-          --"stylua",
-        },
-      },
-
       require("mason").setup({
         ui = {
           icons = {
@@ -21,6 +14,13 @@ return {
 
         max_concurrent_installers = 10,
       })
+
+      local srv_options = {
+        ensure_installed = {
+          "lua-language-server",
+          --"stylua",
+        },
+      }
 
       vim.api.nvim_create_user_command("MasonInstallAll", function()
         if srv_options.ensure_installed and #srv_options.ensure_installed > 0 then
@@ -48,6 +48,22 @@ return {
       local nnoremap = require("utils.keymap").Nnoremap
 
       lspconfig.lua_ls.setup({
+        settings = {
+          Lua = {
+            diagnostics = {
+              globals = { "vim" },
+            },
+            workspace = {
+              library = {
+                [vim.fn.expand "$VIMRUNTIME/lua"] = true,
+                [vim.fn.expand "$VIMRUNTIME/lua/vim/lsp"] = true,
+                [vim.fn.stdpath "data" .. "/lazy/lazy.nvim/lua/lazy"] = true,
+              },
+              maxPreload = 100000,
+              preloadFileSize = 10000,
+            },
+          },
+        },
       })
 
       nnoremap("<Space>e", vim.diagnostic.open_float);
