@@ -17,10 +17,10 @@ M.telescopesetup = function()
   nnoremap("<leader>fb", builtins.buffers)
   nnoremap("<leader>fg", builtins.live_grep)
   nnoremap("<leader>fs", builtins.grep_string)
-  nnoremap("<leader>tt", ":Telescope file_browser<CR>")
+  nnoremap("<leader>tf", ":Telescope file_browser<CR>")
   nnoremap("<leader>te", ":Telescope emoji<CR>")
   nnoremap("<leader>tg", ":Telescope glyph<CR>")
-  nnoremap("<leader>tf", ":Telescope frecency<CR>")
+  nnoremap("<leader>tq", ":Telescope frecency<CR>")
 
   telescope.setup({
     defaults = {
