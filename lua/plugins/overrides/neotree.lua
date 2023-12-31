@@ -3,6 +3,7 @@ local M = {}
 M.neotreekeymap = {
   { "<C-n>", "<cmd>Neotree float toggle<CR>" },
   { "<leader>fr", "<cmd>Neotree float reveal<CR>" },
+  { "<leader>nt", "<cmd>Neotree right toggle<CR>" },
 }
 
 M.neotreesetup = function()
