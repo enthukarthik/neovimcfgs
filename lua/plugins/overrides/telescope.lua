@@ -6,12 +6,6 @@ M.telescopesetup = function()
   local actions = require("telescope.actions")
   local nnoremap = require("utils.keymap").Nnoremap
 
-  telescope.load_extension("ui-select")
-  telescope.load_extension("fzf")
-  telescope.load_extension("frecency")
-  telescope.load_extension("file_browser")
-  telescope.load_extension("emoji")
-  telescope.load_extension("glyph")
 
   nnoremap("<leader>ff", builtins.find_files)
   nnoremap("<leader>fb", builtins.buffers)
@@ -34,6 +28,12 @@ M.telescopesetup = function()
       }
     },
   })
+
+  telescope.load_extension("fzf")
+  telescope.load_extension("frecency")
+  telescope.load_extension("file_browser")
+  telescope.load_extension("emoji")
+  telescope.load_extension("glyph")
 end
 
 return M

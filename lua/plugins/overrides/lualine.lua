@@ -26,7 +26,7 @@ M.lualinesetup = function()
       lualine_c = {{'filename', path = 2, }},
       lualine_x = {'encoding', 'fileformat', 'filetype'},
       lualine_y = {'progress'},
-      lualine_z = {'location', '%b %B', '%h%m%r'},
+      lualine_z = {'location', '%b %B', '%h%m%r','os.date()'},
     },
     inactive_sections = {
       lualine_a = {},
