@@ -4,3 +4,6 @@ indent_type="Spaces"
 indent_width=2
 quote_stype="ForceDouble"
 call_parentheses="Always"
+
+[sort_requires]
+enable = true

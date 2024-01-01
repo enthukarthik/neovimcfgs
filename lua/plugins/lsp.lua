@@ -18,15 +18,20 @@ return {
   },
   {
     "nvimtools/none-ls.nvim",
+    enabled = true,
     event = { "BufReadPost", "BufNewFile" },
-    cmd = { "LspInfo", "LspInstall", "LspUninstall" },
     config = function()
       local null_ls = require("null-ls")
 
+      local sources = {
+        null_ls.builtins.formatting.stylua.with({
+          extra_args = { "--search-parent-directories" },
+        }),
+      }
+
       null_ls.setup({
-        sources = {
-          null_ls.builtins.formatting.stylua,
-        },
+        debug = true,
+        sources = sources,
       })
     end,
   },
