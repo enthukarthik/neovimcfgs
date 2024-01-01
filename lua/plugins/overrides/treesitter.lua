@@ -3,7 +3,7 @@ local M = {}
 M.treesittersetup = function()
   local tsconfigs = require("nvim-treesitter.configs")
   local tstorepeatmove = require("nvim-treesitter.textobjects.repeatable_move")
-  local nxonoremap = require("utils.keymap").Nxonoremap 
+  local nxonoremap = require("utils.keymap").Nxonoremap
 
   tsconfigs.setup({
     ensure_installed = {

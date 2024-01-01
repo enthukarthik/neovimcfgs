@@ -10,15 +10,15 @@ ivnoremap('jk', '<Esc>')
 ivnoremap('kj', '<Esc>')
 
 -- Window pane navigation
-nnoremap('<C-h>','<C-w>h')
-nnoremap('<C-j>','<C-w>j')
-nnoremap('<C-k>','<C-w>k')
-nnoremap('<C-l>','<C-w>l')
+nnoremap('<C-h>', '<C-w>h')
+nnoremap('<C-j>', '<C-w>j')
+nnoremap('<C-k>', '<C-w>k')
+nnoremap('<C-l>', '<C-w>l')
 
-nnoremap('<leader>sv', '<C-w>v') -- split vertically
-nnoremap('<leader>sh', '<C-w>s') -- split horizontally
+nnoremap('<leader>sv', '<C-w>v')     -- split vertically
+nnoremap('<leader>sh', '<C-w>s')     -- split horizontally
 nnoremap('<leader>sx', ':close<CR>') -- close pane
-nnoremap('<leader>se', '<C-w>=') -- make all panes of same sizes
+nnoremap('<leader>se', '<C-w>=')     -- make all panes of same sizes
 
 -- Resize pane windows with arrow keys
 nnoremap('<C-Up>', ':resize +2<CR>')
@@ -50,14 +50,13 @@ vnoremap('<A-j>', ':m .+1<CR>==')
 vnoremap('<A-k>', ':m .-2<CR>==')
 
 -- Better terminal navigation
-tnoremap('<C-h>','<C-\\><C-n><C-w>h')
-tnoremap('<C-j>','<C-\\><C-n><C-w>j')
-tnoremap('<C-k>','<C-\\><C-n><C-w>k')
-tnoremap('<C-l>','<C-\\><C-n><C-w>l')
+tnoremap('<C-h>', '<C-\\><C-n><C-w>h')
+tnoremap('<C-j>', '<C-\\><C-n><C-w>j')
+tnoremap('<C-k>', '<C-\\><C-n><C-w>k')
+tnoremap('<C-l>', '<C-\\><C-n><C-w>l')
 
 -- Move text in visual block mode
 xnoremap('J', ":move '>+1<CR>gv-gv")
 xnoremap('<A-j>', ":move '>+1<CR>gv-gv")
 xnoremap('K', ":move '<-2<CR>gv-gv")
 xnoremap('<A-k>', ":move '<-2<CR>gv-gv")
-

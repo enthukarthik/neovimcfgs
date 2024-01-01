@@ -27,7 +27,7 @@ M.Inoremap = bind('i')
 M.Vnoremap = bind('v')
 M.Tnoremap = bind('t')
 M.Xnoremap = bind('x')
-M.Ivnoremap = bind({'i', 'v'})
-M.Nxonoremap = bind({'n', 'x', 'o'})
+M.Ivnoremap = bind({ 'i', 'v' })
+M.Nxonoremap = bind({ 'n', 'x', 'o' })
 
 return M

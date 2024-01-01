@@ -20,7 +20,7 @@ local options = {
   hlsearch = true,
   smartcase = true,
   grepprg = "rg --vimgrep",
-  grepformat = "%f:%l:%c:%m",                -- :h errorformat
+  grepformat = "%f:%l:%c:%m", -- :h errorformat
 
   smartindent = true,
 
@@ -37,15 +37,14 @@ local options = {
   mouse = "a",
   mousemoveevent = true,
   autowrite = true,
-  formatoptions = "tqnlj",                       -- :h fo-table
+  formatoptions = "tqnlj", -- :h fo-table
   fileencoding = "utf-8",
 }
 
-vim.opt.shortmess:append("IsF")                     -- :h shortmvim.opt
-vim.opt.whichwrap:append("<>[]hl")                  -- :h whichwrap
+vim.opt.shortmess:append("IsF")    -- :h shortmvim.opt
+vim.opt.whichwrap:append("<>[]hl") -- :h whichwrap
 vim.opt.iskeyword:append("-")
 
-for key,value in pairs(options) do
+for key, value in pairs(options) do
   vim.opt[key] = value
 end
-

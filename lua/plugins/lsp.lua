@@ -16,8 +16,18 @@ return {
     dependencies = { "williamboman/mason.nvim", "williamboman/mason-lspconfig.nvim" },
     config = require("plugins.overrides.lspconfig").lspconfigsetup,
   },
-  -- {
-  --   "nvim-lua/lsp-status.nvim",
-  --   event = "VeryLazy",
-  -- },
+  {
+    "nvimtools/none-ls.nvim",
+    event = { "BufReadPost", "BufNewFile" },
+    cmd = { "LspInfo", "LspInstall", "LspUninstall" },
+    config = function()
+      local null_ls = require("null-ls")
+
+      null_ls.setup({
+        sources = {
+          null_ls.builtins.formatting.stylua,
+        },
+      })
+    end,
+  },
 }

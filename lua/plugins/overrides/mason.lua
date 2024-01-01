@@ -16,7 +16,7 @@ M.masonsetup = function()
   local srv_options = {
     ensure_installed = {
       "lua-language-server",
-      --"stylua",
+      "stylua",
     },
   }
 

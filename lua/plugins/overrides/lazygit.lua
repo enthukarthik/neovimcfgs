@@ -1,7 +1,7 @@
 local M = {}
 
 M.lazygitkeymap = {
-  { "<leader>lg", "<cmd>LazyGit<CR>"},
+  { "<leader>lg", "<cmd>LazyGit<CR>" },
 }
 
 M.lazygitsetup = function()
