@@ -3,7 +3,11 @@ vim.opt.termguicolors = true
 
 local colorscheme = "gruvbox"
 
-local status_ok, _ = pcall(vim.cmd, "colorscheme " .. colorscheme)
+local function setcolorscheme(scheme)
+  return vim.cmd.colorscheme(scheme)
+end
+
+local status_ok, _ = pcall(setcolorscheme, colorscheme)
 if not status_ok then
   vim.notify("colorscheme " .. colorscheme .. " not found")
   return
