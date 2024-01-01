@@ -4,11 +4,11 @@ return {
     event = "VeryLazy",
     opts = {},
   },
-  -- {
-  --   "lewis6991/gitsigns.nvim",
-  --   event = "VeryLazy",
-  --   opts = {},
-  -- },
+  {
+    "lewis6991/gitsigns.nvim",
+    event = "BufReadPost",
+    opts = {},
+  },
   {
     "kdheepak/lazygit.nvim",
     keys = require("plugins.overrides.lazygit").lazygitkeymap,
@@ -30,6 +30,10 @@ return {
     event = "VeryLazy",
     dependencies = { "nvim-tree/nvim-web-devicons" },
     config = require("plugins.overrides.lualine").lualinesetup,
+  },
+  {
+    "stevearc/dressing.nvim",
+    event = "VeryLazy",
   },
   {
     "lukas-reineke/indent-blankline.nvim",
