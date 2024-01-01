@@ -32,7 +32,23 @@ return {
     config = require("plugins.overrides.lualine").lualinesetup,
   },
   {
-    "stevearc/dressing.nvim",
+    "lukas-reineke/indent-blankline.nvim",
     event = "VeryLazy",
+    main = "ibl",
+    opts = {}
+  },
+  {
+    "ziontee113/icon-picker.nvim",
+    event = "InsertEnter",
+    dependencies = {
+      "stevearc/dressing.nvim"
+    },
+    config = function()
+      require("icon-picker").setup({
+        disable_legacy_commands = true
+      })
+
+      require("utils.keymap").Inoremap("<A-i>", "<cmd>IconPickerInsert<cr>")
+    end
   },
 }
