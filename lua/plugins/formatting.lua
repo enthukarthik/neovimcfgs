@@ -89,8 +89,4 @@ return {
       nnoremap("<leader>F", "<cmd>FormatWrite<CR>")
     end,
   },
-  {
-    "mfussenegger/nvim-lint",
-    event = { "BufReadPost", "BufNewFile" },
-  },
 }
