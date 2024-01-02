@@ -53,7 +53,6 @@ return {
     "mhartington/formatter.nvim",
     event = { "BufReadPost", "BufNewFile" },
     config = function()
-      -- local util = require("formatter.util")
       local nnoremap = require("utils.keymap").Nnoremap
 
       require("formatter").setup({
@@ -87,6 +86,12 @@ return {
 
       nnoremap("<leader>f", "<cmd>Format<CR>")
       nnoremap("<leader>F", "<cmd>FormatWrite<CR>")
+
+      local formatter_grp = vim.api.nvim_create_augroup("__formatter__", { clear = true })
+      vim.api.nvim_create_autocmd({ "BufWritePost" }, {
+        group = formatter_grp,
+        command = ":FormatWrite",
+      })
     end,
   },
 }
