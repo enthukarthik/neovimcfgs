@@ -31,6 +31,24 @@ return {
           lua = {
             require("formatter.filetypes.lua").stylua,
           },
+          c = {
+            require("formatter.filetypes.c").clangformat,
+          },
+          cpp = {
+            require("formatter.filetypes.cpp").clangformat,
+          },
+          haskell = {
+            require("formatter.filetypes.haskell").stylish_haskell(),
+          },
+          json = {
+            require("formatter.filetypes.json").prettierd,
+          },
+          rust = {
+            require("formatter.filetypes.rust").rustfmt(),
+          },
+          toml = {
+            require("formatter.filetypes.toml").taplo(),
+          },
         },
       })
 

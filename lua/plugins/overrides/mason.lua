@@ -17,6 +17,12 @@ M.masonsetup = function()
     ensure_installed = {
       "lua-language-server",
       "stylua",
+      "clangd",
+      "clang-format",
+      "haskell-language-server",
+      "prettierd",
+      "rust-analyzer",
+      "taplo",
     },
   }
 
