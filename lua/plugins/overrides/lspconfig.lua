@@ -3,13 +3,12 @@ local M = {}
 M.lspconfigsetup = function()
   local lspconfig = require("lspconfig")
   local nnoremap = require("utils.keymap").Nnoremap
+  local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
   lspconfig.lua_ls.setup({
+    capabilities = capabilities,
     settings = {
       Lua = {
-        diagnostics = {
-          globals = { "vim" },
-        },
         workspace = {
           library = {
             [vim.fn.expand "$VIMRUNTIME/lua"] = true,
