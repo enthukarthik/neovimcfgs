@@ -42,7 +42,7 @@ M.lualinesetup = function()
       lualine_c = {},
       lualine_x = {},
       lualine_y = {},
-      lualine_z = { 'tabs' },
+      lualine_z = {require("auto-session.lib").current_session_name},
     },
     winbar = {},
     inactive_winbar = {},

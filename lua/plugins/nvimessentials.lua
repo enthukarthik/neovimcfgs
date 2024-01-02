@@ -58,6 +58,7 @@ return {
   },
   {
     "goolord/alpha-nvim",
+    enabled = false,
     event = "VimEnter",
     dependencies = { "nvim-tree/nvim-web-devicons" },
     opts = function()
@@ -117,6 +118,29 @@ return {
           dashboard.section.footer.val = '󱐋 ' .. stats.count .. ' plugins loaded in ' .. ms .. 'ms'
           pcall(vim.cmd.AlphaRedraw)
         end,
+      })
+    end,
+  },
+  {
+    "tris203/hawtkeys.nvim",
+    config = true,
+  },
+  {
+    "rmagatti/auto-session",
+    event = "VimEnter",
+    config = function()
+      vim.o.sessionoptions = "blank,buffers,curdir,folds,help,tabpages,winsize,winpos,terminal,localoptions"
+
+      require("auto-session").setup({
+        log_level = "info",
+        auto_save_enabled = true,
+        auto_restoer_enabled = true,
+        auto_session_use_git_branch = true,
+        cwd_change_handling = {
+          post_cwd_change_hook = function()
+            require("lualine").refresh()
+          end,
+        },
       })
     end,
   },
