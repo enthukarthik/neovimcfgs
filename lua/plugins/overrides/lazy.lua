@@ -1,12 +1,12 @@
 local M = {}
 
 M.specs = {
-  { import = "plugins" }
+  { import = "plugins" },
 }
 
 M.lazy_opts = {
   defaults = {
-    lazy = true,   -- let all the plugins be lazy loaded by default
+    lazy = true, -- let all the plugins be lazy loaded by default
     version = "*", -- install the latest stable version of all the plugins
   },
   install = {
@@ -52,7 +52,7 @@ M.lazy_opts = {
         "bugreport",
         "ftplugin",
       },
-    }
+    },
   },
   checker = {
     enabled = true,

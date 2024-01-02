@@ -40,21 +40,21 @@ return {
     "lukas-reineke/indent-blankline.nvim",
     event = "VeryLazy",
     main = "ibl",
-    opts = {}
+    opts = {},
   },
   {
     "ziontee113/icon-picker.nvim",
     event = "InsertEnter",
     dependencies = {
-      "stevearc/dressing.nvim"
+      "stevearc/dressing.nvim",
     },
     config = function()
       require("icon-picker").setup({
-        disable_legacy_commands = true
+        disable_legacy_commands = true,
       })
 
       require("utils.keymap").Inoremap("<A-i>", "<cmd>IconPickerInsert<cr>")
-    end
+    end,
   },
   {
     "goolord/alpha-nvim",
@@ -74,18 +74,18 @@ return {
       -- vim.cmd [[autocmd! User AlphaClosed]]
 
       dashboard.section.buttons.val = {
-        dashboard.button('i', '    new file', ':ene <BAR> startinsert<CR>'),
-        dashboard.button('o', '    old files', ':Telescope oldfiles<CR>'),
-        dashboard.button('f', '󰥨    find file', ':Telescope file_browser<CR>'),
-        dashboard.button('g', '󰱼    find text', ':Telescope live_grep_args<CR>'),
-        dashboard.button('l', '󰒲    lazy', ':Lazy<CR>'),
-        dashboard.button('m', '󱌣    mason', ':Mason<CR>'),
-        dashboard.button('p', '󰄉    profile', ':Lazy profile<CR>'),
-        dashboard.button('q', '󰭿    quit', ':qa<CR>'),
+        dashboard.button("i", "    new file", ":ene <BAR> startinsert<CR>"),
+        dashboard.button("o", "    old files", ":Telescope oldfiles<CR>"),
+        dashboard.button("f", "󰥨    find file", ":Telescope file_browser<CR>"),
+        dashboard.button("g", "󰱼    find text", ":Telescope live_grep_args<CR>"),
+        dashboard.button("l", "󰒲    lazy", ":Lazy<CR>"),
+        dashboard.button("m", "󱌣    mason", ":Mason<CR>"),
+        dashboard.button("p", "󰄉    profile", ":Lazy profile<CR>"),
+        dashboard.button("q", "󰭿    quit", ":qa<CR>"),
       }
       for _, button in ipairs(dashboard.section.buttons.val) do
-        button.opts.hl = 'Normal'
-        button.opts.hl_shortcut = 'Function'
+        button.opts.hl = "Normal"
+        button.opts.hl_shortcut = "Function"
       end
       dashboard.section.footer.opts.hl = "Special"
       dashboard.opts.layout = {
@@ -113,9 +113,9 @@ return {
       vim.api.nvim_create_autocmd("User", {
         pattern = "LazyVimStarted",
         callback = function()
-          local stats = require('lazy').stats()
+          local stats = require("lazy").stats()
           local ms = (math.floor(stats.startuptime * 100 + 0.5) / 100)
-          dashboard.section.footer.val = '󱐋 ' .. stats.count .. ' plugins loaded in ' .. ms .. 'ms'
+          dashboard.section.footer.val = "󱐋 " .. stats.count .. " plugins loaded in " .. ms .. "ms"
           pcall(vim.cmd.AlphaRedraw)
         end,
       })

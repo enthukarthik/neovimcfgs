@@ -6,7 +6,6 @@ M.telescopesetup = function()
   local actions = require("telescope.actions")
   local nnoremap = require("utils.keymap").Nnoremap
 
-
   nnoremap("<leader>ff", builtins.find_files)
   nnoremap("<leader>fb", builtins.buffers)
   nnoremap("<leader>fg", builtins.live_grep)
@@ -24,8 +23,8 @@ M.telescopesetup = function()
           ["<C-k>"] = actions.move_selection_previous,
           ["<C-h>"] = actions.which_key,
           ["<leader><leader>"] = actions.close,
-        }
-      }
+        },
+      },
     },
   })
 

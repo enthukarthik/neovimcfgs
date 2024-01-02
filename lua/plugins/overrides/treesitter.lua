@@ -33,9 +33,9 @@ M.treesittersetup = function()
           ["as"] = { query = "@scope", query_group = "locals", desc = "Select language scope" },
         },
         selection_modes = {
-          ["@parameter.outer"] = 'v', -- v is charwise, V is linewise, <C-v> is blockwise
-          ["@function.outer"] = 'v',
-          ["@class.outer"] = 'v',
+          ["@parameter.outer"] = "v", -- v is charwise, V is linewise, <C-v> is blockwise
+          ["@function.outer"] = "v",
+          ["@class.outer"] = "v",
         },
         include_surrounding_whitespace = true,
       },

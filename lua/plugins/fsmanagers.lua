@@ -12,10 +12,10 @@ return {
   },
   {
     "nvim-telescope/telescope-file-browser.nvim",
-    dependencies = { "nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim", "nvim-tree/nvim-web-devicons" }
+    dependencies = { "nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim", "nvim-tree/nvim-web-devicons" },
   },
   {
-    'stevearc/oil.nvim',
+    "stevearc/oil.nvim",
     keys = require("plugins.overrides.oil").oilkeymap,
     opts = {},
     dependencies = { "nvim-tree/nvim-web-devicons" },

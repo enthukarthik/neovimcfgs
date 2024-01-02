@@ -41,7 +41,7 @@ local options = {
   fileencoding = "utf-8",
 }
 
-vim.opt.shortmess:append("IsF")    -- :h shortmvim.opt
+vim.opt.shortmess:append("IsF") -- :h shortmvim.opt
 vim.opt.whichwrap:append("<>[]hl") -- :h whichwrap
 vim.opt.iskeyword:append("-")
 

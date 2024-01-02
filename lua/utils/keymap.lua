@@ -20,14 +20,14 @@ end
 --   terminal_mode     = "t",
 --   command_mode      = "c",
 
-M.Map = bind('n', { noremap = false })
-M.AllMap = bind('')
-M.Nnoremap = bind('n')
-M.Inoremap = bind('i')
-M.Vnoremap = bind('v')
-M.Tnoremap = bind('t')
-M.Xnoremap = bind('x')
-M.Ivnoremap = bind({ 'i', 'v' })
-M.Nxonoremap = bind({ 'n', 'x', 'o' })
+M.Map = bind("n", { noremap = false })
+M.AllMap = bind("")
+M.Nnoremap = bind("n")
+M.Inoremap = bind("i")
+M.Vnoremap = bind("v")
+M.Tnoremap = bind("t")
+M.Xnoremap = bind("x")
+M.Ivnoremap = bind({ "i", "v" })
+M.Nxonoremap = bind({ "n", "x", "o" })
 
 return M
