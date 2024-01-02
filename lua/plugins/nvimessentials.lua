@@ -4,11 +4,12 @@ return {
     event = "VeryLazy",
     opts = {},
   },
-  -- {
-  --   "lewis6991/gitsigns.nvim",
-  --   event = "BufReadPost",
-  --   opts = {},
-  -- },
+  {
+    "lewis6991/gitsigns.nvim",
+    -- event = "BufReadPost",
+    lazy = false,
+    opts = {},
+  },
   {
     "kdheepak/lazygit.nvim",
     keys = require("plugins.overrides.lazygit").lazygitkeymap,
