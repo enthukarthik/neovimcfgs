@@ -28,7 +28,7 @@ local options = {
   sidescrolloff = 5,
 
   clipboard = "unnamed,unnamedplus",
-  completeopt = "menu,menuone,noselect",
+  completeopt = "menu,menuone,noselect,preview,noinsert",
   splitright = true,
   splitbelow = true,
   swapfile = false,

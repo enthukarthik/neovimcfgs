@@ -123,6 +123,7 @@ return {
   },
   {
     "tris203/hawtkeys.nvim",
+    enabled = false,
     config = true,
   },
   {
@@ -134,7 +135,7 @@ return {
       require("auto-session").setup({
         log_level = "info",
         auto_save_enabled = true,
-        auto_restoer_enabled = true,
+        auto_restore_enabled = true,
         auto_session_use_git_branch = true,
         cwd_change_handling = {
           post_cwd_change_hook = function()

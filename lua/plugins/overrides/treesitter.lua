@@ -12,6 +12,14 @@ M.treesittersetup = function()
       "vim",
       "vimdoc",
       "query",
+      "cpp",
+      "haskell",
+      "haskell_persistent",
+      "markdown",
+      "markdown_inline",
+      "python",
+      "rust",
+      "toml",
     },
 
     auto_install = true,
@@ -26,11 +34,11 @@ M.treesittersetup = function()
         enable = true,
         lookahead = true,
         keymaps = {
-          ["af"] = "@function.outer",
-          ["if"] = "@function.inner",
-          ["ac"] = "@class.outer",
-          ["ic"] = { query = "@class.inner", desc = "Select inner part of the class region" },
-          ["as"] = { query = "@scope", query_group = "locals", desc = "Select language scope" },
+          -- ["af"] = "@function.outer",
+          -- ["if"] = "@function.inner",
+          -- ["ac"] = "@class.outer",
+          -- ["ic"] = { query = "@class.inner", desc = "Select inner part of the class region" },
+          -- ["as"] = { query = "@scope", query_group = "locals", desc = "Select language scope" },
         },
         selection_modes = {
           ["@parameter.outer"] = "v", -- v is charwise, V is linewise, <C-v> is blockwise
@@ -41,11 +49,11 @@ M.treesittersetup = function()
       },
 
       -- swap function params and arguments
-      swap = {
-        enable = true,
-        swap_next = { ["<leader>ns"] = "@parameter.inner" },
-        swap_previous = { ["<leader>ps"] = "@parameter.inner" },
-      },
+      -- swap = {
+      --   enable = true,
+      --   swap_next = { ["<leader>ns"] = "@parameter.inner" },
+      --   swap_previous = { ["<leader>ps"] = "@parameter.inner" },
+      -- },
     },
 
     incremental_selection = {
