@@ -2,6 +2,7 @@ local M = {}
 
 M.toggletermkeymap = {
   { "<C-\\>", "<cmd>ToggleTerm<CR>" },
+  { "<leader>tr", "<cmd>ToggleTerm direction=vertical size=120<CR>" },
 }
 
 M.toggletermsetup = function()
