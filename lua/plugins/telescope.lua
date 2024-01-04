@@ -14,6 +14,7 @@ return {
       "nvim-telescope/telescope-frecency.nvim",
       "xiyaowong/telescope-emoji.nvim",
       "ghassan0/telescope-glyph.nvim",
+      "nvim-telescope/telescope-file-browser.nvim",
     },
     config = require("plugins.overrides.telescope").telescopesetup,
   },

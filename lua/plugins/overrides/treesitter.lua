@@ -1,6 +1,9 @@
 local M = {}
 
 M.treesittersetup = function()
+  if vim.loop.os_uname().sysname == "Windows_NT" then
+    require("nvim-treesitter.install").compilers = { "clang" }
+  end
   local tsconfigs = require("nvim-treesitter.configs")
   local tstorepeatmove = require("nvim-treesitter.textobjects.repeatable_move")
   local nxonoremap = require("utils.keymap").Nxonoremap
