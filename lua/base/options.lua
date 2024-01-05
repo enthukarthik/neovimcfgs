@@ -39,6 +39,7 @@ local options = {
   autowrite = true,
   formatoptions = "tqnlj", -- :h fo-table
   fileencoding = "utf-8",
+  guifont = "Hack Nerd Font:h13",
 }
 
 vim.opt.shortmess:append("IsF") -- :h shortmvim.opt
