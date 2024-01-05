@@ -22,6 +22,15 @@ M.lspconfigsetup = function()
     },
   })
 
+  lspconfig.clangd.setup({
+    capabilities = capabilities,
+  })
+
+  lspconfig.hls.setup({
+    capabilities = capabilities,
+    filetypes = { "haskell", "lhaskell", "cabal" },
+  })
+
   nnoremap("<leader>e", vim.diagnostic.open_float)
   nnoremap("[d", vim.diagnostic.goto_prev)
   nnoremap("]d", vim.diagnostic.goto_next)
