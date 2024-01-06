@@ -9,6 +9,7 @@ M.alesetup = function()
     let g:ale_lint_on_enter = 1
     let g:ale_linters = {
     \ 'rust': ['analyzer'],
+    \ 'python' : ['ruff'],
     \  }
   ]])
 end

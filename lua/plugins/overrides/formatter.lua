@@ -23,6 +23,9 @@ M.formattersetup = function()
       json = {
         require("formatter.filetypes.json").prettierd,
       },
+      python = {
+        require("formatter.filetypes.python").black(),
+      },
       rust = {
         require("formatter.filetypes.rust").rustfmt(),
       },

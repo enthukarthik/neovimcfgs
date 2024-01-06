@@ -23,6 +23,9 @@ M.masonsetup = function()
       "prettierd",
       "rust-analyzer",
       "taplo",
+      "pyright",
+      "black",
+      "ruff",
     },
   }
 

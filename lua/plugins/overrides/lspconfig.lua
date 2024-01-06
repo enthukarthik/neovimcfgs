@@ -26,6 +26,10 @@ M.lspconfigsetup = function()
     capabilities = capabilities,
   })
 
+  lspconfig.pyright.setup({
+    capabilities = capabilities,
+  })
+
   nnoremap("<leader>e", vim.diagnostic.open_float)
   nnoremap("[d", vim.diagnostic.goto_prev)
   nnoremap("]d", vim.diagnostic.goto_next)
